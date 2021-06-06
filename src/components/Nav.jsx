@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
     return (
         <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
                 <img
                     src="./img/store.png"
                     alt=""
@@ -12,7 +13,7 @@ const Nav = () => {
                     className="d-inline-block align-center pr-2"
                 />
                 Green-Store
-            </a>
+            </Link>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -27,25 +28,40 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarColor02">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="/">
+                        <Link className="nav-link" to="/">
                             Home
                             <span className="sr-only">(current)</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/products">
-                            Productos
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="!#">
-                            Compras
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="!#">
+                        <Link className="nav-link" to="!#">
                             Ventas
-                        </a>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/statistics">
+                            Estadisticas
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="!#">
+                            Compras
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="!#">
+                            Productos
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="!#">
+                            Inventario
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="!#">
+                            Usuarios
+                        </Link>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">

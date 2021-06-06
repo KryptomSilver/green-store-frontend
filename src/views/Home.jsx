@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 
 const Home = () => {
@@ -23,8 +24,8 @@ const Home = () => {
                         </a>
                     </div>
                     <div className="col  d-flex justify-content-center">
-                        <a
-                            href="!#"
+                        <Link
+                            to="/statistics"
                             className="card btn btn-primary align-items-center"
                             style={{ height: "16rem", width: "16rem" }}
                         >
@@ -34,7 +35,7 @@ const Home = () => {
                                 className="card-img-top img-fluid mh-30 mw-100"
                                 alt="..."
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="col  d-flex justify-content-center">
                         <a
