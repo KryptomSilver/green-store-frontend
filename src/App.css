@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+/* Global */
+body {
+    font-family: RobotoRegular;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: "RobotoLight";
+    src: local("RobotoLight"),
+        url("./fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: "RobotoRegular";
+    src: local("RobotoRegular"),
+        url("./fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Utils */
+.f-robot-r {
+    font-family: RobotoRegular;
 }
-
-.App-link {
-  color: #61dafb;
+.f-robot-l {
+    font-family: RobotoLight;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Login */
+.login {
+    margin-top: 15rem;
+    width: 23rem;
+    background: #40596b;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.75);
 }
