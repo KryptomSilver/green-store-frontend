@@ -6,7 +6,7 @@ import LineChart from "../components/LineChart";
 const Statistics = () => {
     return (
         <Fragment>
-            <Nav />
+            <Nav links={true} activo={'statistics'}/>
             <div className="container">
                 <div className="row">
                     <div className="col mt-4 d-flex justify-content-center">

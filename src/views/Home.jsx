@@ -9,8 +9,8 @@ const Home = () => {
             <div className="container">
                 <div className="row p-2 mt-5">
                     <div className="col d-flex justify-content-center">
-                        <a
-                            href="!#"
+                        <Link
+                            to="/sales"
                             className="card btn  btn-primary align-items-center "
                             style={{ height: "16rem", width: "16rem" }}
                         >
@@ -21,7 +21,7 @@ const Home = () => {
                                 alt="..."
                                 style={{ height: "11rem" }}
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="col  d-flex justify-content-center">
                         <Link

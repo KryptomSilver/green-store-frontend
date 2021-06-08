@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ links,activo }) => {
     return (
-        <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
             <Link className="navbar-brand" to="/">
                 <img
                     src="./img/store.png"
@@ -26,50 +26,50 @@ const Nav = () => {
                 <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarColor02">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <Link className="nav-link" to="/">
-                            Home
-                            <span className="sr-only">(current)</span>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="!#">
-                            Ventas
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/statistics">
-                            Estadisticas
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="!#">
-                            Compras
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="!#">
-                            Productos
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="!#">
-                            Inventario
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="!#">
-                            Usuarios
-                        </Link>
-                    </li>
-                </ul>
+                {links ? (
+                    <ul className="navbar-nav mr-auto">
+                        <li className={activo === 'home'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="/">
+                                Home
+                            </Link>
+                        </li>
+                        <li  className={activo === 'sales'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="/sales">
+                                Ventas
+                            </Link>
+                        </li>
+                        <li  className={activo === 'statistics'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="/statistics">
+                                Estadisticas
+                            </Link>
+                        </li>
+                        <li  className={activo === 'purchases'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="!#">
+                                Compras
+                            </Link>
+                        </li>
+                        <li  className={activo === 'products'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="!#">
+                                Productos
+                            </Link>
+                        </li>
+                        <li  className={activo === 'inventory'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="!#">
+                                Inventario
+                            </Link>
+                        </li>
+                        <li  className={activo === 'users'?`nav-item active`:`nav-item`}>
+                            <Link className="nav-link" to="!#">
+                                Usuarios
+                            </Link>
+                        </li>
+                    </ul>
+                ) : (
+                    <ul className="navbar-nav mr-auto"></ul>
+                )}
                 <form className="form-inline my-2 my-lg-0">
-                    <button
-                        className="btn btn-success my-2 my-sm-0"
-                        type="submit"
-                    >
-                        Iniciar Sesión
+                    <button className="btn btn-info my-2 my-sm-0" type="submit">
+                        Sing In
                     </button>
                 </form>
             </div>
