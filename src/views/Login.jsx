@@ -6,9 +6,13 @@ const Login = () => {
             <div className="row justify-content-md-center">
                 <div className="card p-3 login">
                     <div className="card-body">
-                        <h2 className="text-center text-white">
-                            Iniciar Sesión
-                        </h2>
+                        <div className="logo-img">
+                            <img
+                                src="./img/store.png"
+                                alt=""
+                                className="login-img"
+                            />
+                        </div>
                         <div className="row">
                             <div className="col">
                                 <div className="form-group">
@@ -18,6 +22,7 @@ const Login = () => {
                                     <input
                                         type="text"
                                         className="form-control"
+                                        placeholder="Usuario"
                                     />
                                 </div>
                                 <div className="form-group">
@@ -27,11 +32,12 @@ const Login = () => {
                                     <input
                                         type="password"
                                         className="form-control"
+                                        placeholder="Contraseña"
                                     />
                                 </div>
                             </div>
                         </div>
-                        <div className="d-flex align-items-center  justify-content-center">
+                        <div className="d-flex align-items-center  justify-content-center mt-2">
                             <a
                                 href="!#"
                                 className="btn btn-success btn-lg w-50"

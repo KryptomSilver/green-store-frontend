@@ -22,32 +22,41 @@ body {
     font-family: RobotoLight;
 }
 /* Login */
+.login-img {
+    width: 8rem;
+    height: 8rem;
+    margin-top: -5.5rem;
+}
+.logo-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .login {
     margin-top: 15rem;
     width: 23rem;
-    background: #40596b;
     border-radius: 0.3rem;
     -webkit-box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.75);
+    /* background-color: #445c6c3f; */
 }
 /* Sales */
-.money{
+.money {
     font-size: 1.4rem;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     font-weight: 900;
 }
-.submonto{
+.submonto {
     font-size: 1.2rem;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
-.product-unit{
+.product-unit {
     text-align: center;
     font-weight: 600;
     font-size: 1.2rem;
 }
-.product-title{
+.product-title {
     font-size: 1.8rem;
     font-weight: 800;
-
 }
