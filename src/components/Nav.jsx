@@ -1,7 +1,9 @@
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Nav = ({ links,activo }) => {
+const Nav = ({ links, activo }) => {
     return (
         <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
             <Link className="navbar-brand" to="/">
@@ -28,37 +30,79 @@ const Nav = ({ links,activo }) => {
             <div className="collapse navbar-collapse" id="navbarColor02">
                 {links ? (
                     <ul className="navbar-nav mr-auto">
-                        <li className={activo === 'home'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "home"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="/">
                                 Home
                             </Link>
                         </li>
-                        <li  className={activo === 'sales'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "sales"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="/sales">
                                 Ventas
                             </Link>
                         </li>
-                        <li  className={activo === 'statistics'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "statistics"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="/statistics">
                                 Estadisticas
                             </Link>
                         </li>
-                        <li  className={activo === 'purchases'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "purchases"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="!#">
                                 Compras
                             </Link>
                         </li>
-                        <li  className={activo === 'products'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "products"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="!#">
                                 Productos
                             </Link>
                         </li>
-                        <li  className={activo === 'inventory'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "inventory"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="!#">
                                 Inventario
                             </Link>
                         </li>
-                        <li  className={activo === 'users'?`nav-item active`:`nav-item`}>
+                        <li
+                            className={
+                                activo === "users"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
                             <Link className="nav-link" to="!#">
                                 Usuarios
                             </Link>
@@ -68,9 +112,19 @@ const Nav = ({ links,activo }) => {
                     <ul className="navbar-nav mr-auto"></ul>
                 )}
                 <form className="form-inline my-2 my-lg-0">
-                    <button className="btn btn-info my-2 my-sm-0" type="submit">
-                        Sing In
-                    </button>
+                    <ul className="navbar-nav mr-auto">
+                        <li
+                            className={
+                                activo === "users"
+                                    ? `nav-item active`
+                                    : `nav-item`
+                            }
+                        >
+                            <Link className="nav-link text-white" to="/login">
+                                <FontAwesomeIcon icon={faUser} className='mr-1'/> Sing In
+                            </Link>
+                        </li>
+                    </ul>
                 </form>
             </div>
         </nav>

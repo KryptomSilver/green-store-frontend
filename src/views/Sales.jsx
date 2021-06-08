@@ -5,23 +5,26 @@ import Nav from "../components/Nav";
 const Sales = () => {
     return (
         <Fragment>
-            <Nav links={true} activo={'sales'}/>
+            <Nav links={true} activo={"sales"} />
             <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <div className="form-group d-flex justify-content-end mt-3">
-                            <button
-                                className="btn-success btn"
-                                type="button"
-                                data-toggle="modal"
-                                data-target="#exampleModal"
-                                data-whatever="@getbootstrap"
-                            >
-                                Agregar
-                            </button>
-                        </div>
+                <form className="row ">
+                    <div className="d-flex align-items-center mt-3 p-0">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="No. Producto"
+                        />
+                        <button
+                            className="btn btn-secondary ml-3"
+                            type="button"
+                            data-toggle="modal"
+                            data-target="#exampleModal"
+                            data-whatever="@getbootstrap"
+                        >
+                            Buscar
+                        </button>
                     </div>
-                </div>
+                </form>
                 <div className="row">
                     <table className="table table-borderless table-primary  table-hover mt-3">
                         <thead className="text-center">
@@ -62,7 +65,7 @@ const Sales = () => {
                         <label htmlFor="" className="pr-3 submonto ">
                             IBA:
                         </label>
-                        <label htmlFor="" className="submonto ">
+                        <label htmlFor="" className="submonto">
                             $25.677
                         </label>
                     </div>
@@ -74,7 +77,7 @@ const Sales = () => {
                             $734,434.677
                         </label>
                     </div>
-                    
+
                     {/* Modal */}
                     <div
                         className="modal fade"
@@ -82,16 +85,17 @@ const Sales = () => {
                         tabIndex={-1}
                         aria-labelledby="exampleModalLabel"
                         aria-hidden="true"
+                        data-backdrop="static"
                     >
-                        <div className="modal-dialog modal-xl">
+                        <div className="modal-dialog">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h5
-                                        className="modal-title"
+                                    <h3
+                                        className="modal-title "
                                         id="exampleModalLabel"
                                     >
-                                        Buscar producto
-                                    </h5>
+                                        Producto
+                                    </h3>
                                     <button
                                         type="button"
                                         className="close"
@@ -102,144 +106,47 @@ const Sales = () => {
                                     </button>
                                 </div>
                                 <div className="modal-body">
-                                    <div className="container">
-                                        <form className="row">
-                                            <div className="d-flex justify-content-around align-items-center">
+                                    <div className="row">
+                                        <h5 className="text-center pb-3 text-white product-title">
+                                            Manzana amarilla
+                                        </h5>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col">
+                                            <div className="form-group">
+                                                <label htmlFor="">
+                                                    Cantidad del producto:
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    className="form-control"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col">
+                                            <div className="form-group">
+                                                <label htmlFor="">
+                                                    Precio del producto:
+                                                </label>
                                                 <input
                                                     type="text"
                                                     className="form-control"
+                                                    value="$12"
+                                                    disabled
                                                 />
-                                                <button className="btn ml-3 btn-secondary">
-                                                    Buscar
-                                                </button>
                                             </div>
-                                        </form>
-                                        <div className="row">
-                                            <table className="table table-borderless table-primary  table-hover mt-3">
-                                                <thead className="text-center">
-                                                    <tr>
-                                                        <th>No. Producto</th>
-                                                        <th>Nombre producto</th>
-                                                        <th>Cantidad</th>
-                                                        <th>Precio</th>
-                                                        <th>Agregar</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody className="table-active text-center">
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Papas</td>
-                                                        <td>12</td>
-                                                        <td>$12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>Manzana</td>
-                                                        <td>$12</td>
-                                                        <td>12</td>
-                                                        <td>
-                                                            <input
-                                                                type="checkbox"
-                                                                className="form-check-input"
-                                                                name="add"
-                                                                id="add"
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col">
+                                            <div className="form-group text-center">
+                                                <label
+                                                    htmlFor=""
+                                                    className="product-unit"
+                                                >
+                                                    Precio unitario = $40.33
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +162,7 @@ const Sales = () => {
                                         type="button"
                                         className="btn btn-outline-success"
                                     >
-                                        Agregar
+                                        Confirmar
                                     </button>
                                 </div>
                             </div>
