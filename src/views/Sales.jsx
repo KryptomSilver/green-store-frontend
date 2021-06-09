@@ -26,47 +26,181 @@ const Sales = () => {
                     </div>
                 </form>
                 <div className="row">
-                    <table className="table table-borderless table-primary  table-hover mt-3">
-                        <thead className="text-center">
-                            <tr>
-                                <th>No. Producto</th>
-                                <th>Nombre producto</th>
-                                <th>Cantidad</th>
-                                <th>Precio</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody className="table-active text-center">
-                            <tr>
-                                <td>12</td>
-                                <td>Papas</td>
-                                <td>20</td>
-                                <td>$342</td>
-                                <td>
-                                    <button className="btn btn-danger btn-sm">
-                                        <FontAwesomeIcon icon={faTrash} />
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td>Manzana</td>
-                                <td>2</td>
-                                <td>$200</td>
-                                <td>
-                                    <button className="btn btn-danger btn-sm">
-                                        <FontAwesomeIcon icon={faTrash} />
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div className="d-flex flex-row justify-content-end align-items-center p-0">
-                        <label htmlFor="" className="pr-3 submonto ">
-                            IBA:
-                        </label>
+                    <div
+                        className="bg-secondary"
+                        style={{
+                            width: "1140px",
+                            height: "510px",
+                            padding: 0,
+                            marginTop: "1rem",
+                        }}
+                    >
+                        <table className="table table-borderless table-primary  table-hover ">
+                            <thead className="text-center">
+                                <tr>
+                                    <th>No. Producto</th>
+                                    <th>Nombre producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody className="table-active text-center">
+                                <tr>
+                                    <td>42005917</td>
+                                    <td>Papas</td>
+                                    <td>2</td>
+                                    <td>$12</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>22142926</td>
+                                    <td>Zanahoria</td>
+                                    <td>3</td>
+                                    <td>$20</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>95339345</td>
+                                    <td>Manzana amarilla</td>
+                                    <td>5</td>
+                                    <td>$25</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>76962564</td>
+                                    <td>Manzana verde</td>
+                                    <td>7</td>
+                                    <td>$14</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>55974777</td>
+                                    <td>Lechuga</td>
+                                    <td>1</td>
+                                    <td>$9</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>79594901</td>
+                                    <td>Naranja</td>
+                                    <td>15</td>
+                                    <td>$30</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>45223864</td>
+                                    <td>Sandía</td>
+                                    <td>2</td>
+                                    <td>$50</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>63011492</td>
+                                    <td>Brócoli</td>
+                                    <td>3</td>
+                                    <td>$10</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>55479776</td>
+                                    <td>Limón</td>
+                                    <td>10</td>
+                                    <td>$20</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>41969435</td>
+                                    <td>Cilantro</td>
+                                    <td>2</td>
+                                    <td>$10</td>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm">
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="d-flex flex-row justify-content-between align-items-center mt-3 p-0">
+                        <ul className="pagination">
+                            <li className="page-item disabled">
+                                <button className="page-link" >
+                                    &laquo;
+                                </button>
+                            </li>
+                            <li className="page-item active">
+                                <button className="page-link" >
+                                    1
+                                </button>
+                            </li>
+                            <li className="page-item">
+                                <button className="page-link" >
+                                    2
+                                </button>
+                            </li>
+                            <li className="page-item">
+                                <button className="page-link" >
+                                    3
+                                </button>
+                            </li>
+                            <li className="page-item">
+                                <button className="page-link" >
+                                    4
+                                </button>
+                            </li>
+                            <li className="page-item">
+                                <button className="page-link" >
+                                    5
+                                </button>
+                            </li>
+                            <li className="page-item">
+                                <button className="page-link" >
+                                    &raquo;
+                                </button>
+                            </li>
+                        </ul>
+
                         <label htmlFor="" className="submonto">
-                            $25.677
+                            IBA: $5.67
                         </label>
                     </div>
                     <div className="d-flex flex-row justify-content-end align-items-center p-0">
@@ -74,7 +208,7 @@ const Sales = () => {
                             Total:
                         </label>
                         <label htmlFor="" className="money">
-                            $734,434.677
+                            $205.67
                         </label>
                     </div>
 
